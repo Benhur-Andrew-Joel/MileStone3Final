@@ -1,0 +1,11 @@
+const { Router } = require("express");
+const router = Router();
+const { check, login, signup, createTodo, getAll, deleteOne, edit } = require("../Controllers/controller");
+router.route("/check").get(check);
+router.route("/login").get(login);
+router.route("/signup").post(signup);
+router.route("/add").post(createTodo);
+router.route("/getAll").get(getAll);
+router.route("/delete/:id").get(deleteOne);
+router.route("/update/:id").put(edit);
+module.exports = router;
